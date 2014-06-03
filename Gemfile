@@ -11,3 +11,7 @@ gem 'spree_auth_devise',
   branch: spree_version
 
 gemspec
+
+group :development, :test do 
+  gem 'pry'
+end

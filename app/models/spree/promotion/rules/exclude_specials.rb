@@ -4,11 +4,11 @@ module Spree
     
       class ExcludeSpecials < Spree::PromotionRule
         def eligible?(order, options = {})
-          order.line_items.count >= 1
+          order.line_items.count > 0
         end
 
         def products
-          Spree::Product.where(promotion_exclude: false)
+          Spree::Product.where('promotion_exclude IS NOT TRUE')
         end
       end
       

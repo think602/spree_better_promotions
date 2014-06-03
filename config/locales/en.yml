@@ -2,4 +2,12 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  spree:
+    better_promotions: Exclude from promotions
+    
+    promotion_rule_types:
+      exclude_specials:
+        name: Exclude special products
+        description: Excludes products marked with promotion exclude
+    
+    percent_per_item_minus_excluded: Percent Per Item (non-excluded products)
