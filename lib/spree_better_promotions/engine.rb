@@ -19,8 +19,8 @@ module SpreeBetterPromotions
     
     initializer 'spree_better_promotions.register.calculators', after: 'spree.register.calculators' do |app|
       app.config.spree.calculators.promotion_actions_create_adjustments << Spree::Calculator::ExcludeSpecialsPercentPerItem
-      app.config.spree.promotions.rules << Spree::Promotion::Rules::ExcludeSpecials
-      Spree::PermittedAttributes.product_attributes << :promotion_exclude
+      # app.config.spree.promotions.rules << Spree::Promotion::Rules::ExcludeSpecial
+      # Spree::PermittedAttributes.product_attributes << :promotion_exclude
     end
     
   end
