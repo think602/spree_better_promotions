@@ -12,9 +12,6 @@ module Spree
       ex_brands = excluded_brands(object)
  
       object.line_items.reduce(0) do |sum, line_item|
-        
-        binding.pry
-        
         if ex_brands.include?(line_item.product.brand)
           sum += 0
         else
