@@ -10,7 +10,7 @@ module Spree
       return 0 if object.nil?
       
       object.line_items.reduce(0) do |sum, line_item|
-        sum += discount(line_item)
+        sum += compute_discount(line_item)
       end
     end
 
